@@ -1,0 +1,8 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "Cygwin": {
+          "source": "PowerShell",
+          "args": ["C:\\cygwin64\\cygwin.bat -i /Cygwin-Terminal.ico -"]
+         }
+       }
+}
