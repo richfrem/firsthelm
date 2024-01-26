@@ -3,7 +3,7 @@ name: firsthelm
 description: A Helm chart for Kubernetes
 
 # A chart can be either an 'application' or a 'library' chart.
-# adding a comment 2:06PM Jan 26, 2024
+# adding a comment 2:42PM Jan 26, 2024
 # Application charts are a collection of templates that can be packaged into versioned archives
 # to be deployed.
 #
