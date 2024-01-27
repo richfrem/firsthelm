@@ -1,15 +1,20 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: jenkins
+  name: jenkins-app
 spec:
-  type: NodePort
   ipFamilies:
     - IPv4
   ports:
-    - protocol: TCP
+    - name: 8080-tcp
+      protocol: TCP
       port: 8080
       targetPort: 8080
+  ipFamilyPolicy: SingleStack
+  sessionAffinity: None
   selector:
-    app: jenkins
+    deployment: jenkins-app
+status:
+  loadBalancer: {}
+
 

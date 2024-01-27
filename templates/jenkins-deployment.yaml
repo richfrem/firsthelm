@@ -1,26 +1,26 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: jenkins
-  labels:
-    DataClass: Medium
+  name: jenkins-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins
+      app: jenkins-app
   template:
     metadata:
       labels:
-        app: jenkins
+        app: jenkins-app
     spec:
       containers:
-      - name: jenkins
+      - name: jenkins-app
         image: bitnami/jenkins:latest
         env:
           - name:  JENKINS_USERNAME
             value: test
         ports:
-          - name: http
-            containerPort: 8080
+          - containerPort: 8080
+            protocol: TCP
+        resources: {}
+        imagePullPolicy: IfNotPresent
           
